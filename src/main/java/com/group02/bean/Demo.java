@@ -9,4 +9,9 @@ class Demo {
      * 数据库中对应字段的含义
      */
     private String demo;
+
+    /**
+     * 测试提交
+     */
+    private int int_flag;
 }
