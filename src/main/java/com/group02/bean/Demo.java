@@ -19,4 +19,9 @@ class Demo {
      *  测试拉取
      */
     private String str_flag;
+    
+    /**
+     *  第二次测试拉取(试验试验，优点神奇)
+     */
+    private Boolean boo_flag;
 }
