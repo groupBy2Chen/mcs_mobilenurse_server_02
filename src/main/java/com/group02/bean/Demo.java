@@ -14,4 +14,9 @@ class Demo {
      * 测试提交
      */
     private int int_flag;
+    
+    /**
+     *  测试拉取
+     */
+    private String str_flag;
 }
