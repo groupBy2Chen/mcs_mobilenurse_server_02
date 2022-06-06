@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group02.dao.DemoDao">
+
+    <!--
+        * id： methodTow
+        * 功能：  DemoMapper方法模板
+        * 时间：  最后一次操作时间
+        * codeBy：  操作人名
+        * @return String
+    -->
+<!--    <select id="methodTow" >-->
+
+
+<!--    </select>-->
+
+</mapper>
