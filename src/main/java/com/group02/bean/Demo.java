@@ -30,6 +30,6 @@ class Demo {
     //dj
     String A;
 
-
+    String B;
 
 }
