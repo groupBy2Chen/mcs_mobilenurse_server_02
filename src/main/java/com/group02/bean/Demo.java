@@ -29,6 +29,7 @@ class Demo {
     private String zhangugangxue;
 
     //dj
+    String A;
 
 
 
