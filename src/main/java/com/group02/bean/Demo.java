@@ -21,7 +21,7 @@ class Demo {
     private String str_flag;
     
     /**
-     *  第二次测试拉取(试验试验，优点神奇)
+     *  第二次测试上传
      */
     private Boolean boo_flag;
 }
