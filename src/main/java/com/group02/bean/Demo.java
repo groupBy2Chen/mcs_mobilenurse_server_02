@@ -28,6 +28,7 @@ class Demo {
 
 
     //dj
+    String A;
 
 
 
