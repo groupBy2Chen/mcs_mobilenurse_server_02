@@ -29,7 +29,7 @@ class Demo {
     int a ;
 
     //hzq
-    int hzqh;
+    int hzq;
 
 
 
