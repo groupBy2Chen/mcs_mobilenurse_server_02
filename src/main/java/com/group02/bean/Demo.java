@@ -27,4 +27,6 @@ class Demo {
 
     //2chen
     int a ;
+
+    int kk;
 }
