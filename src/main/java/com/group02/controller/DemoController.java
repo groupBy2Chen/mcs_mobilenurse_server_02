@@ -19,7 +19,7 @@ public class DemoController {
      * codeBy：  操作人名
      *
      * 注意：RequestMapping 根据实际情况选择用post或put、delete、get
-     *      并且根据诗句情况选择是否用@RequestBody
+     *      并且根据情况选择是否用@RequestBody
      */
     @ResponseBody
     @RequestMapping("/自定义路径名")
