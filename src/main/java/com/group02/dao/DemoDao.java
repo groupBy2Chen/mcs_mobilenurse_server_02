@@ -17,6 +17,6 @@ public interface DemoDao {
      */
     String methodTow();
 
-    String methodow();
+    String mehodow();
 
 }
