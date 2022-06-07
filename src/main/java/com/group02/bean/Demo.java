@@ -27,4 +27,8 @@ class Demo {
 
     //2chen
     int a ;
+
+    //张广学
+    String zhangguangxue;
+
 }
