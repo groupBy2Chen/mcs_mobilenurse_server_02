@@ -25,16 +25,6 @@ class Demo {
      */
     private Boolean boo_flag;
 
-    //2chen
-    int a ;
 
-    //张广学
-    String zhangguangxue;
-
-    //hzq
-    String hzq;
-
-    //lichenyang
-    String lichenyang;
 
 }
