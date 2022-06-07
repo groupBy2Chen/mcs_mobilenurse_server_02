@@ -16,4 +16,7 @@ public interface DemoDao {
      * @return String
      */
     String methodTow();
+
+    String methodow();
+
 }

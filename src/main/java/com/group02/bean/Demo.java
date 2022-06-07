@@ -24,4 +24,7 @@ class Demo {
      *  第二次测试上传
      */
     private Boolean boo_flag;
+
+    //2chen
+    int a ;
 }
