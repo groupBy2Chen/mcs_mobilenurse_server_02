@@ -14,23 +14,20 @@ class Demo {
      * 测试提交
      */
     private int int_flag;
-    
+
     /**
      *  测试拉取
      */
     private String str_flag;
-    
+
     /**
      *  第二次测试上传
      */
     private Boolean boo_flag;
 
-    //2chen
-    int a ;
 
-    //张广学
-    String zhangguangxue;
 
+    //djsahfjafa
 
 
 
