@@ -27,4 +27,7 @@ class Demo {
 
     //2chen
     int a ;
+
+//    劳斯莱斯了
+    int b;
 }
