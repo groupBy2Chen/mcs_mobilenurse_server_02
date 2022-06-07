@@ -31,6 +31,9 @@ class Demo {
     //张广学
     String zhangguangxue;
 
+    //hzq
+    String hzq;
+
     //lichenyang
     String lichenyang;
 
