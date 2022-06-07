@@ -25,8 +25,12 @@ class Demo {
      */
     private Boolean boo_flag;
 
+    //zhangguangxue
+    private String zhangugangxue;
 
+    //dj
+    String A;
 
-    //djsahfjafa
+    String B;
 
 }
