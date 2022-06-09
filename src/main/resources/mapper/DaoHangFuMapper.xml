@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.group02.dao.DemoDao">
+<mapper namespace="com.group02.dao.DaoHangFuDao">
 
     <!--
         * id： methodTow
@@ -13,5 +13,16 @@
 
 
 <!--    </select>-->
+
+<!--
+    * id： seleteT_DaoHangFuAll
+    * 功能：  查询t_DaoHangFu所有数据
+    * 时间：  6.9
+    * codeBy：  韩兆淇
+    * @return List<t_DaoHangFu>
+-->
+    <select id="seleteDaoHangFuAll" resultType="DaoHangFu">
+        select * from t_DaoHangFu
+    </select>
 
 </mapper>
