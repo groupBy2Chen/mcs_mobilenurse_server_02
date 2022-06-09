@@ -8,139 +8,179 @@ import java.sql.Date;
 public class YongHu {
 
     /**
-     * 数据库中对应字段的含义
+     * 系统ID
      */
-    //系统ID
     private String xiTongID;
-    //病人ID
+
+    /**
+     * 病人ID
+     */
     private String bingRenID;
-    //被改变
+
+    /**
+     * 是否被改变
+     */
     private Integer beiGaiBian;
-    //上级ID
-   private String shangJiID;
-    //更新时间
+
+    /**
+     * 上级ID
+     */
+    private String shangJiID;
+
+    /**
+     * 更新时间
+     */
     private Date gengXinShiJian;
-    //超级管理员
-    private Integer chaoji;
-    //密码
-    private String mima;
-    //备用字段
-    private String beiyong01;
-    // 用户id
+
+    /**
+     * 是否为超级管理员
+     */
+    private Integer chaoJi;
+
+    /**
+     *  密码
+     */
+    private String miMa;
+
+    /**
+     * 用户id
+     */
     private String yongHuID;
-    //用户名
+    /**
+     * 用户名
+     */
     private String yongHuMing;
-    //工号
+
+    /**
+     * 工号
+     */
     private Integer gongHao;
-    //职务
+
+    /**
+     * 职务
+     */
     private String zhiWu;
-    //身份证号
+
+    /**
+     * 身份证号
+     */
     private Integer shenFenZhengHao;
 
+    /**
+     * 备用字段01
+     */
+    private String beiyong01;
+
+    /**
+     * 生成setter 和 getter 方法
+     */
     public String getXiTongID() {
-        return xiTongID;
+    return xiTongID;
     }
 
     public void setXiTongID(String xiTongID) {
-        this.xiTongID = xiTongID;
+    this.xiTongID = xiTongID;
     }
 
     public String getBingRenID() {
-        return bingRenID;
+    return bingRenID;
     }
 
     public void setBingRenID(String bingRenID) {
-        this.bingRenID = bingRenID;
+    this.bingRenID = bingRenID;
     }
 
     public Integer getBeiGaiBian() {
-        return beiGaiBian;
+    return beiGaiBian;
     }
 
     public void setBeiGaiBian(Integer beiGaiBian) {
-        this.beiGaiBian = beiGaiBian;
+    this.beiGaiBian = beiGaiBian;
     }
 
     public String getShangJiID() {
-        return shangJiID;
+    return shangJiID;
     }
 
     public void setShangJiID(String shangJiID) {
-        this.shangJiID = shangJiID;
+    this.shangJiID = shangJiID;
     }
 
     public Date getGengXinShiJian() {
-        return gengXinShiJian;
+    return gengXinShiJian;
     }
 
     public void setGengXinShiJian(Date gengXinShiJian) {
-        this.gengXinShiJian = gengXinShiJian;
+    this.gengXinShiJian = gengXinShiJian;
     }
 
-    public Integer getChaoji() {
-        return chaoji;
+    public Integer getchaoJi() {
+    return chaoJi;
     }
 
-    public void setChaoji(Integer chaoji) {
-        this.chaoji = chaoji;
+    public void setchaoJi(Integer chaoJi) {
+    this.chaoJi = chaoJi;
     }
 
-    public String getMima() {
-        return mima;
+    public String getmiMa() {
+    return miMa;
     }
 
-    public void setMima(String mima) {
-        this.mima = mima;
+    public void setmiMa(String miMa) {
+    this.miMa = miMa;
     }
 
     public String getBeiyong01() {
-        return beiyong01;
+    return beiyong01;
     }
 
     public void setBeiyong01(String beiyong01) {
-        this.beiyong01 = beiyong01;
+    this.beiyong01 = beiyong01;
     }
 
     public String getYongHuID() {
-        return yongHuID;
+    return yongHuID;
     }
 
     public void setYongHuID(String yongHuID) {
-        this.yongHuID = yongHuID;
+    this.yongHuID = yongHuID;
     }
 
     public String getYongHuMing() {
-        return yongHuMing;
+    return yongHuMing;
     }
 
     public void setYongHuMing(String yongHuMing) {
-        this.yongHuMing = yongHuMing;
+    this.yongHuMing = yongHuMing;
     }
 
     public Integer getGongHao() {
-        return gongHao;
+    return gongHao;
     }
 
     public void setGongHao(Integer gongHao) {
-        this.gongHao = gongHao;
+    this.gongHao = gongHao;
     }
 
     public String getZhiWu() {
-        return zhiWu;
+    return zhiWu;
     }
 
     public void setZhiWu(String zhiWu) {
-        this.zhiWu = zhiWu;
+    this.zhiWu = zhiWu;
     }
 
     public Integer getShenFenZhengHao() {
-        return shenFenZhengHao;
+    return shenFenZhengHao;
     }
 
     public void setShenFenZhengHao(Integer shenFenZhengHao) {
         this.shenFenZhengHao = shenFenZhengHao;
     }
 
+    /**
+     * 重新toString方法
+     */
     @Override
     public String toString() {
         return "t_yonghu{" +
@@ -149,8 +189,8 @@ public class YongHu {
                 ", beiGaiBian=" + beiGaiBian +
                 ", shangJiID='" + shangJiID + '\'' +
                 ", gengXinShiJian=" + gengXinShiJian +
-                ", chaoji=" + chaoji +
-                ", mima='" + mima + '\'' +
+                ", chaoJi=" + chaoJi +
+                ", miMa='" + miMa + '\'' +
                 ", beiyong01='" + beiyong01 + '\'' +
                 ", yongHuID='" + yongHuID + '\'' +
                 ", yongHuMing='" + yongHuMing + '\'' +
