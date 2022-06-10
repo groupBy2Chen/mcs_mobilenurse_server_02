@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group02.dao.ZaiYuanBingRenDao">
+
+    <!--
+     * id： selectZaiYuanBingRenDataBykeShiID
+     * 功能：  根据YongHuID 查询ZaiYuanBingRen表中所有数据
+     * 时间：  2022-0609-23：19
+     * codeBy：  chen
+     * @return List<ZaiYuanBingRen>
+    -->
+    <select id="selectZaiYuanBingRenDataBykeShiID" resultType="com.group02.bean.ZaiYuanBingRen">
+        select
+            xiTongID,
+            bingRenID,
+            beiGaiBian,
+            shangJiID,
+            gengXinShiJian,
+            bingRenXinXi,
+            chuangHao,
+            linChuangLuJing,
+            chuShengRiQi,
+            feiBie,
+            guoMinShi,
+            huLiDengJi,
+            hunYinZhuangKuang,
+            jiWangShi,
+            keShiID,
+            beiYong01,
+            keShiMingCheng,
+            biaoJi,
+            nianLing,
+            qianFeiJinE,
+            ruKeShiJian,
+            ruKeTianShu,
+            ruKeXiaoShi,
+            ruYuanShiJian,
+            ruYuanTianShu,
+            ruYuanXiaoShi,
+            beiTanWangID,
+            xingBie,
+            xingMing,
+            xinXi,
+            yuJiaoJinE,
+            zeRenHuShi,
+            ziFeiFeiYong,
+            zhenDuan,
+            zhuZhiYiSheng,
+            ziJiaoFeiYong,
+            zhuangTai,
+            zhuYuan,
+            zhuYuanHaoMa,
+            zhuYuanZhuangTai,
+            lianXiDianHua,
+            lianXiRenXingMing,
+            yuHuanZheGuanXi
+        from
+            t_zaiyuanbingren
+
+        <if test="#{keShiID} != null or #{keShiID} != ''">
+            <where>
+                keShiID = #{keShiID}
+            </where>
+        </if>
+
+    </select>
+
+</mapper>
