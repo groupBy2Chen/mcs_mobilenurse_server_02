@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group02.dao.KeShiDao">
+
+    <!--
+       结果映射 id为 selactAll
+    -->
+    <resultMap id="selactAll" type="com.group02.bean.KeShi">
+        <id property='xiTongID'  column='kxtID'/>
+        <result property="bingRenID" column="kbrID"/>
+        <result property="gengXinShiJian" column="kgxsj"/>
+        <result property="bingQuMingCheng" column="kbqmc"/>
+        <result property="bingQuID" column="kbqID"/>
+        <result property="keShiID" column="kksID"/>
+        <result property="keShiMingCheng" column="kksmc"/>
+
+        <result property="yongHuKeShi_objFlag.xiTongID" column="ykxtID"/>
+        <result property="yongHuKeShi_objFlag.bingRenID" column="ykbrID"/>
+        <result property="yongHuKeShi_objFlag.gengXinShiJian" column="ykgxsj"/>
+        <result property="yongHuKeShi_objFlag.keShiID" column="ykshid"/>
+        <result property="yongHuKeShi_objFlag.yongHuID" column="ykyhid"/>
+
+        <result property="yongHU_objFlag.xiTongID" column="yxtID"/>
+        <result property="yongHU_objFlag.bingRenID" column="ybrID"/>
+        <result property="yongHU_objFlag.gengXinShiJian" column="ygxsj"/>
+        <result property="yongHU_objFlag.yongHuID" column="ykyhid"/>
+        <result property="yongHU_objFlag.chaoJi" column="ycj"/>
+        <result property="yongHU_objFlag.miMa" column="ymm"/>
+        <result property="yongHU_objFlag.beiyong01" column="yby01"/>
+        <result property="yongHU_objFlag.yongHuID" column="yyhID"/>
+        <result property="yongHU_objFlag.yongHuMing" column="yyhm"/>
+        <result property="yongHU_objFlag.gongHao" column="ygh"/>
+        <result property="yongHU_objFlag.zhiWu" column="yzu"/>
+        <result property="yongHU_objFlag.shenFenZhengHao" column="ysfzh"/>
+    </resultMap>
+
+    <!--
+        * id： selectKeShiDataByCon
+        * 功能：  按照yongHuID查询用户、科室、用户科室表全部数据
+        * 时间：  22-0609-16:18
+        * codeBy：  chen
+        * @return List<KeShi>
+    -->
+
+    <select id="selectKeShiDataByCon" resultMap="selactAll">
+        select
+            ks.xiTongID kxtID,
+            ks.bingRenID kbrID,
+            ks.gengXinShiJian kgxsj,
+            ks.bingQuMingCheng kbqmc,
+            ks.bingQuID kbqID,
+            ks.keShiID kksID,
+            ks.keShiMingCheng kksmc,
+
+            yhks.xiTongID ykxtID,
+            yhks.bingRenID ykbrID,
+            yhks.gengXinShiJian ykgxsj,
+            yhks.keShiID ykshid,
+            yhks.yongHuID ykyhid,
+
+            yh.xiTongID yxtID,
+            yh.bingRenID ybrID,
+            yh.gengXinShiJian ygxsj,
+            yh.chaoji ycj,
+            yh.mima ymm,
+            yh.beiyong01 yby01,
+            yh.yongHuID yyhID,
+            yh.yongHuMing yyhm,
+            yh.gongHao ygh,
+            yh.zhiWu yzu,
+            yh.shenFenZhengHao ysfzh
+        from
+            t_keshi ks
+        left join
+            t_yonghukeshi yhks
+        on
+            ks.keShiID = yhks.keShiID
+        left join
+            t_yonghu yh
+        on
+            yh.yongHuID = yhks.yongHuID
+        where
+            yhks.yongHuID = #{yongHuID}
+    </select>
+
+
+</mapper>

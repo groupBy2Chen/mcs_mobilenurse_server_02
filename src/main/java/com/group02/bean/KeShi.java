@@ -8,6 +8,16 @@ import java.sql.Date;
 public class KeShi {
 
     /**
+     * 封装YongHu对象
+     */
+    private YongHu yongHU_objFlag;
+
+    /**
+     * 疯转YongHuKeShi对象
+     */
+    private YongHuKeShi yongHuKeShi_objFlag;
+
+    /**
      * 系统ID
      */
     private String xiTongID;
