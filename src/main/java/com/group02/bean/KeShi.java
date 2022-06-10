@@ -10,7 +10,6 @@ public class KeShi {
     /**
      * 系统ID
      */
-
     private String xiTongID;
     //病人ID
     private String bingRenID;
