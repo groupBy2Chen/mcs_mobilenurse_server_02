@@ -14,8 +14,8 @@ public class DengLuJieMianServiceImpl implements DengLuJieMianService {
 
     @Override
     public int chaxun(t_DengLuJieMian ruleForm) {
-        t_DengLuJieMian chaxun = dengLuJieMianDao.chaxun(ruleForm);
-        if(chaxun != null){
+        t_DengLuJieMian chaxunS = dengLuJieMianDao.chaxunDao(ruleForm);
+        if(chaxunS != null){
             return 1;
         }else {
             return 0;
