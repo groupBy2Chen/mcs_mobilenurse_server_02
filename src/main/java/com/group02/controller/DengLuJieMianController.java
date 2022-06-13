@@ -15,12 +15,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @CrossOrigin
 public class DengLuJieMianController {
     @Autowired
-    DengLuJieMianServiceImpl LuJieMianServiceImpl;
+    DengLuJieMianServiceImpl dengLuJieMianServiceImpl;
 //    查询
     @ResponseBody
     @GetMapping("/chaxun")
-    public int dengLuChaXun(t_DengLuJieMian ruleForm){
+    public t_DengLuJieMian dengLuChaXun(t_DengLuJieMian ruleForm){
 
-        return LuJieMianServiceImpl.chaxun(ruleForm);
+        t_DengLuJieMian flag = dengLuJieMianServiceImpl.chaxun(ruleForm);
+
+        return flag;
     }
 }

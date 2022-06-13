@@ -13,13 +13,15 @@ public class DengLuJieMianServiceImpl implements DengLuJieMianService {
 
 
     @Override
-    public int chaxun(t_DengLuJieMian ruleForm) {
+    public t_DengLuJieMian chaxun(t_DengLuJieMian ruleForm) {
         t_DengLuJieMian chaxunS = dengLuJieMianDao.chaxunDao(ruleForm);
+
         if(chaxunS != null){
-            return 1;
+            return chaxunS;
         }else {
-            return 0;
+            return null;
         }
     }
+
 
 }
