@@ -13,7 +13,7 @@ public class KeShi {
     private YongHu yongHU_objFlag;
 
     /**
-     * 疯转YongHuKeShi对象
+     * 封装YongHuKeShi对象
      */
     private YongHuKeShi yongHuKeShi_objFlag;
 
@@ -37,6 +37,22 @@ public class KeShi {
     private String keShiID;
     //科室名称
     private String keShiMingCheng;
+
+    public YongHu getYongHU_objFlag() {
+        return yongHU_objFlag;
+    }
+
+    public void setYongHU_objFlag(YongHu yongHU_objFlag) {
+        this.yongHU_objFlag = yongHU_objFlag;
+    }
+
+    public YongHuKeShi getYongHuKeShi_objFlag() {
+        return yongHuKeShi_objFlag;
+    }
+
+    public void setYongHuKeShi_objFlag(YongHuKeShi yongHuKeShi_objFlag) {
+        this.yongHuKeShi_objFlag = yongHuKeShi_objFlag;
+    }
 
     public String getXiTongID() {
         return xiTongID;
@@ -113,7 +129,9 @@ public class KeShi {
     @Override
     public String toString() {
         return "KeShi{" +
-                "xiTongID='" + xiTongID + '\'' +
+                "yongHU_objFlag=" + yongHU_objFlag +
+                ", yongHuKeShi_objFlag=" + yongHuKeShi_objFlag +
+                ", xiTongID='" + xiTongID + '\'' +
                 ", bingRenID='" + bingRenID + '\'' +
                 ", beiGaiBian=" + beiGaiBian +
                 ", shangJiID='" + shangJiID + '\'' +
