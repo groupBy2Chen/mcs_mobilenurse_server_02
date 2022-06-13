@@ -1,16 +1,11 @@
 package com.group02.bean;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-
 import java.sql.Date;
 
 /**
- * 导航父表实体类
+ * 导航子表实体类
  */
-
-@Component
-public class DaoHangFu {
+public class DaoHangZi {
 
     /**
      * 系统id
@@ -33,19 +28,29 @@ public class DaoHangFu {
     private Date gengXinShiJian;
 
     /**
-     * 组名称
+     * 子菜单id
      */
-    private String zuMingCheng;
+    private String ziCaiDanID;
 
     /**
-     * 排序id
+     * 子菜单名称
      */
-    private String paiXuID;
+    private String ziCaiDanMingCheng;
 
     /**
-     * 组id
+     * 分组id
      */
-    private String ZuID;
+    private String fenZuID;
+
+    /**
+     * 子菜单排序id
+     */
+    private String ziCaiDanPaiXuID;
+
+    /**
+     * 病人id
+     */
+    private String bingRenID;
 
     /**
      * 备用01
@@ -55,22 +60,12 @@ public class DaoHangFu {
     /**
      * 备用02
      */
-    private String bingRenID;
+    private String beiYong02;
 
     /**
-     * 备用03
+     * e姓名
      */
-    private String beiYong03;
-
-    /**
-     * 备用04
-     */
-    private String beiYong04;
-
-    /**
-     * e名称
-     */
-    private String eMingCheng;
+    private String eXingMing;
 
     /**
      * 名称
@@ -109,36 +104,36 @@ public class DaoHangFu {
         this.gengXinShiJian = gengXinShiJian;
     }
 
-    public String getZuMingCheng() {
-        return zuMingCheng;
+    public String getZiCaiDanID() {
+        return ziCaiDanID;
     }
 
-    public void setZuMingCheng(String zuMingCheng) {
-        this.zuMingCheng = zuMingCheng;
+    public void setZiCaiDanID(String ziCaiDanID) {
+        this.ziCaiDanID = ziCaiDanID;
     }
 
-    public String getPaiXuID() {
-        return paiXuID;
+    public String getZiCaiDanMingCheng() {
+        return ziCaiDanMingCheng;
     }
 
-    public void setPaiXuID(String paiXuID) {
-        this.paiXuID = paiXuID;
+    public void setZiCaiDanMingCheng(String ziCaiDanMingCheng) {
+        this.ziCaiDanMingCheng = ziCaiDanMingCheng;
     }
 
-    public String getZuID() {
-        return ZuID;
+    public String getFenZuID() {
+        return fenZuID;
     }
 
-    public void setZuID(String zuID) {
-        ZuID = zuID;
+    public void setFenZuID(String fenZuID) {
+        this.fenZuID = fenZuID;
     }
 
-    public String getBeiYong01() {
-        return beiYong01;
+    public String getZiCaiDanPaiXuID() {
+        return ziCaiDanPaiXuID;
     }
 
-    public void setBeiYong01(String beiYong01) {
-        this.beiYong01 = beiYong01;
+    public void setZiCaiDanPaiXuID(String ziCaiDanPaiXuID) {
+        this.ziCaiDanPaiXuID = ziCaiDanPaiXuID;
     }
 
     public String getBingRenID() {
@@ -149,28 +144,28 @@ public class DaoHangFu {
         this.bingRenID = bingRenID;
     }
 
-    public String getBeiYong03() {
-        return beiYong03;
+    public String getBeiYong01() {
+        return beiYong01;
     }
 
-    public void setBeiYong03(String beiYong03) {
-        this.beiYong03 = beiYong03;
+    public void setBeiYong01(String beiYong01) {
+        this.beiYong01 = beiYong01;
     }
 
-    public String getBeiYong04() {
-        return beiYong04;
+    public String getBeiYong02() {
+        return beiYong02;
     }
 
-    public void setBeiYong04(String beiYong04) {
-        this.beiYong04 = beiYong04;
+    public void setBeiYong02(String beiYong02) {
+        this.beiYong02 = beiYong02;
     }
 
-    public String geteMingCheng() {
-        return eMingCheng;
+    public String geteXingMing() {
+        return eXingMing;
     }
 
-    public void seteMingCheng(String eMingCheng) {
-        this.eMingCheng = eMingCheng;
+    public void seteXingMing(String eXingMing) {
+        this.eXingMing = eXingMing;
     }
 
     public String getMingCheng() {

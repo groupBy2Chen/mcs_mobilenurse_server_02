@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group02.dao.DemoDao">
+
+    <!--
+        * id： seleteDaoHangZiAll
+        * 功能：  根据系统id查询导航子表所有
+        * 时间：  6.10
+        * codeBy：  韩兆淇
+        * @return List<DaoHangZi>
+    -->
+    <select id="seleteDaoHangZiAll" resultType="DaoHangZi">
+        select * from t_daohangzi
+        <where>
+            <if test="xiTongID != null and xiTongID != ''">
+                xiTongID = #{xiTongID}
+            </if>
+        </where>
+    </select>
+
+</mapper>

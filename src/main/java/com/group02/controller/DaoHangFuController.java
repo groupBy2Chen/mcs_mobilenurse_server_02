@@ -19,6 +19,8 @@ import java.util.List;
 @CrossOrigin
 public class DaoHangFuController {
 
+
+
     @Autowired
     DaoHangFuServiceImpl daoHangFuServiceImpl;
 
@@ -32,6 +34,7 @@ public class DaoHangFuController {
     @GetMapping("/sltall")
     @ResponseBody
     List<DaoHangFu> get_DaoHangFuAll(){
-        return daoHangFuServiceImpl.findDaoHangFuAll();
+        List<DaoHangFu> a = daoHangFuServiceImpl.findDaoHangFuAll();
+        return a;
     };
 }

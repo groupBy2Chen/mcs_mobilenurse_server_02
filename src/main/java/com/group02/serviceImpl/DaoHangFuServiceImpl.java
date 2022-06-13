@@ -26,6 +26,7 @@ public class DaoHangFuServiceImpl implements DaoHangFuService {
      */
     @Override
     public List<DaoHangFu> findDaoHangFuAll() {
+
         return daoHangFuDao.seleteDaoHangFuAll();
     }
 }
