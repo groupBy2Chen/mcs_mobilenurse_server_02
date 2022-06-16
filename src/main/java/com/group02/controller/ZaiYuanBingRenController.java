@@ -26,6 +26,7 @@ public class ZaiYuanBingRenController {
     /**
      * name： getZaiYuanBingRenDataByKeShiID
      * 功能：  根据YongHuID 查询ZaiYuanBingRen表中所有数据
+     *  如果参数中huLiDengJi不为空 那么查询时额外添加护理等级条件
      * 时间：  2022-0609-23：40
      * codeBy：  chen
      *
@@ -34,10 +35,11 @@ public class ZaiYuanBingRenController {
      */
     @GetMapping("/gzybrdbyh")
     @ResponseBody
-    public List<ZaiYuanBingRen> getZaiYuanBingRenDataByKeShiID(String keShiID){
+    public List<ZaiYuanBingRen> getZaiYuanBingRenDataByKeShiID(String keShiID,String huLiDengJi){
 
-        List<ZaiYuanBingRen> list_flag = zaiYuanBingRenServiceImpl.findZaiYuanBingRenDataBykeShiID(keShiID);
+        List<ZaiYuanBingRen> list_flag = zaiYuanBingRenServiceImpl.findZaiYuanBingRenDataBykeShiID(keShiID,huLiDengJi);
 
         return list_flag;
+
     }
 }
