@@ -39,7 +39,7 @@ public class ZaiYuanBingRenServiceImpl implements ZaiYuanBingRenService {
          * 若为空则正常执行查询方法 并直接返回结果集合
          * 否则执行查询方法后 组织并返回view层需要的数据格式
          */
-        if(huLiDengJi == null | huLiDengJi == ""){
+        if(huLiDengJi == null || huLiDengJi == ""){
 
             List<ZaiYuanBingRen> list_flag = zaiYuanBingRenDao.selectZaiYuanBingRenDataBykeShiID(keShiID,huLiDengJi);
 

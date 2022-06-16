@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group02.dao.ChuYuanBingRenDao">
+
+    <!--
+    * name selectChuYuanBingRenAllDataOrByCon
+    * 功能： 根据是否传递xingMing属性的参数判断查询全部数据或模糊查询
+    * @param chuYuanBingRen_objFlag
+    * @return List<ChuYuanBingRen>
+    -->
+    <select id="selectChuYuanBingRenAllDataOrByCon" resultType="com.group02.bean.ChuYuanBingRen">
+        select
+            xiTongID,
+            bingRenID,
+            beiGaiBian,
+            shangJiID,
+            gengXinShiJian,
+            bingRenXinXi,
+            chuangHao,
+            linChuangLuJing,
+            chuShengRiQi,
+            feiBie,
+            guoMinShi,
+            huLiDengJi,
+            hunYinZhuangKuang,
+            jiWangShi,
+            keShiID,
+            beiYong01,
+            keShiMingCheng,
+            nianLing,
+            qianFeiJinE,
+            ruKeShiJian,
+            ruKeTianShu,
+            ruKeXiaoShi,
+            ruYuanShiJian,
+            ruYuanTianShu,
+            ruYuanXiaoShi,
+            beiTanWangID,
+            xingBie,
+            xingMing,
+            xinXi,
+            yuJiaoJinE,
+            zeRenHuShi,
+            ziFeiFeiYong,
+            zhenDuan,
+            zhuZhiYiSheng,
+            ziJiaoFeiYong,
+            zhuangTai,
+            zhuYuan,
+            zhuYuanHaoMa,
+            zhuYuanZhuangTai,
+            lianXiDianHua,
+            lianXiRenXingMing,
+            yuHuanZheGuanXi
+        from
+            t_chuyuanbingren
+
+            <if test="xingMing != null and xingMing !=''">
+                <where>
+                    xingMing like concat('%',#{xingMing},'%')
+                </where>
+            </if>
+    </select>
+
+</mapper>

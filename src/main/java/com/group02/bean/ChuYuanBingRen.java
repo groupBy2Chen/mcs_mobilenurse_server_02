@@ -4,9 +4,9 @@ import java.sql.Date;
 import java.util.List;
 
 /**
- * ZaiYuanBingRen 具体类
+ * ChuYuanBingRen 具体类
  */
-public class ZaiYuanBingRen {
+public class ChuYuanBingRen {
 
     /**
      * 封装树形控件所需要的属性
@@ -16,7 +16,7 @@ public class ZaiYuanBingRen {
     /**
      * 封装树形控件所需要的属性
      */
-    List<ZaiYuanBingRen> children;
+    List<ChuYuanBingRen> children;
 
     /**
      * 系统ID
@@ -233,9 +233,6 @@ public class ZaiYuanBingRen {
      */
     String yuHuanZheGuanXi;
 
-    //生成 setter 和 getter 方法
-
-
     public String getLabel() {
         return label;
     }
@@ -244,11 +241,11 @@ public class ZaiYuanBingRen {
         this.label = label;
     }
 
-    public List<ZaiYuanBingRen> getChildren() {
+    public List<ChuYuanBingRen> getChildren() {
         return children;
     }
 
-    public void setChildren(List<ZaiYuanBingRen> children) {
+    public void setChildren(List<ChuYuanBingRen> children) {
         this.children = children;
     }
 
@@ -598,8 +595,10 @@ public class ZaiYuanBingRen {
 
     @Override
     public String toString() {
-        return "ZaiYuanBingRen{" +
-                "xiTongID='" + xiTongID + '\'' +
+        return "ChuYuanBingRen{" +
+                "label='" + label + '\'' +
+                ", children=" + children +
+                ", xiTongID='" + xiTongID + '\'' +
                 ", bingRenID='" + bingRenID + '\'' +
                 ", beiGaiBian=" + beiGaiBian +
                 ", shangJiID='" + shangJiID + '\'' +
