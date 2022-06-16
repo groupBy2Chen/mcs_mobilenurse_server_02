@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group02.dao.T_Mcs_NavtokeshiDao">
+
+    <!--
+        * id： seleteDaoHangZiAll
+        * 功能：  根据系统id查询导航子表所有
+        * 时间：  6.10
+        * codeBy：  韩兆淇
+        * @return List<DaoHangZi>
+    -->
+    <select id="seleteT_Mcs_NavtokeshiAll" resultType="T_Mcs_Navtokeshi">
+        select zijicaidanmingncheng from t_mcs_navtokeshi where zuID = #{xiTongID}
+    </select>
+
+<!--    查询常用菜单所有数据 并按组名分组-->
+    <select id="selectT_Mcs_NavtokeshiAllGroupByZuMing" resultType="T_Mcs_Navtokeshi">
+        select
+             *
+        from
+             t_mcs_navtokeshi
+        <where>
+            <if test="ksmc != null and ksmc != ''">
+                keShiMingCheng = #{ksmc}
+            </if>
+            <if test="erjicaidanmingcheng != null and erjicaidanmingcheng != ''">
+                and ziJiCaiDanMingnCheng like concat('%',#{erjicaidanmingcheng},'%')
+            </if>
+        </where>
+        order by
+             zuming
+    </select>
+
+</mapper>
