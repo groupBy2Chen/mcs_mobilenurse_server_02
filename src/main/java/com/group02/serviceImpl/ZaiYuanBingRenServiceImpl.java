@@ -68,9 +68,11 @@ public class ZaiYuanBingRenServiceImpl implements ZaiYuanBingRenService {
 
             //遍历查询得到的数据
             for (ZaiYuanBingRen obj:list_flag){
+
                 //声明新的ZaiYuanBingRen对象
                 ZaiYuanBingRen objFlag = new ZaiYuanBingRen();
                 objFlag = obj;
+
                 //将每一个数据中树形控件所需要的数据封装在这个ZaiYuanBingRen对象中
                 objFlag.setLabel("[" + obj.getChuangHao() + "]" + obj.getXingMing());
 
@@ -78,7 +80,7 @@ public class ZaiYuanBingRenServiceImpl implements ZaiYuanBingRenService {
                 childrens.add(objFlag);
             }
 
-            //最后将组织好的数据封装在一个新数组中return
+            //最后将组织好的数据封装在一个新数组中返还
             List<ZaiYuanBingRen> DataForTree = new ArrayList<>();
             DataForTree.add(obj_flag);
 

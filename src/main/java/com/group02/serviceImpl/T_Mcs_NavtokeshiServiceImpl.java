@@ -32,7 +32,10 @@ public class T_Mcs_NavtokeshiServiceImpl implements T_Mcs_NavtokeshiService {
      * @return
      */
     @Override
-    public List<T_Mcs_Navtokeshi> findT_Mcs_NavtokeshiAllGroupByZuMing(String ksmc,String erjicaidanmingcheng) {
-        return t_Mcs_NavtokeshiDao.selectT_Mcs_NavtokeshiAllGroupByZuMing(ksmc,erjicaidanmingcheng);
+    public List<T_Mcs_Navtokeshi> findCaiDanDataBykeShiMingChengAndZiJiCaiDanMingCheng(T_Mcs_Navtokeshi t_Mcs_Navtokeshi){
+
+        List<T_Mcs_Navtokeshi> list_flag = t_Mcs_NavtokeshiDao.selectCaiDanDataBykeShiMingChengAndZiJiCaiDanMingCheng(t_Mcs_Navtokeshi);
+
+        return list_flag;
     }
 }

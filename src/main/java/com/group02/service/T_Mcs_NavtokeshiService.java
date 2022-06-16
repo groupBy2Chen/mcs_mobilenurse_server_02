@@ -18,6 +18,6 @@ public interface T_Mcs_NavtokeshiService {
     /**
      *  查询常用菜单所有数据 并按组名分组
      */
-    List<T_Mcs_Navtokeshi> findT_Mcs_NavtokeshiAllGroupByZuMing(String ksmc,String erjicaidanmingcheng);
+    List<T_Mcs_Navtokeshi> findCaiDanDataBykeShiMingChengAndZiJiCaiDanMingCheng(T_Mcs_Navtokeshi t_Mcs_Navtokeshi);
 
 }

@@ -20,12 +20,12 @@ public interface T_Mcs_NavtokeshiDao {
     /**
      *  查询所有常用菜单配置
      */
-    List<T_Mcs_Navtokeshi> selectT_Mcs_NavtokeshiAllGroupByZuMing(String ksmc,String erjicaidanmingcheng);
+    List<T_Mcs_Navtokeshi> selectCaiDanDataBykeShiMingChengAndZiJiCaiDanMingCheng(T_Mcs_Navtokeshi t_Mcs_Navtokeshi);
 
     /**
      * 更新常用菜单配置子级id
      */
-    Integer updateChangYongCaiDanPeiZhi();
+//    Integer updateChangYongCaiDanPeiZhi();
 
 
 }

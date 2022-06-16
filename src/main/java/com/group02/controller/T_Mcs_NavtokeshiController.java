@@ -35,10 +35,13 @@ public class T_Mcs_NavtokeshiController {
     /**
      * 查询常用菜单所有数据并按照组名分组
      */
-    @GetMapping("/selAllByZuMing")
+    @GetMapping("/gcddbsmcazcdmc")
     @ResponseBody
-    public List<T_Mcs_Navtokeshi> getT_Mcs_NavtokeshiAllGroupByZuMing(String ksmc,String erjicaidanmingcheng){
-        return t_Mcs_NavtokeshiServiceImpl.findT_Mcs_NavtokeshiAllGroupByZuMing(ksmc,erjicaidanmingcheng);
+    public List<T_Mcs_Navtokeshi> getCaiDanDataBykeShiMingChengAndZiJiCaiDanMingCheng(T_Mcs_Navtokeshi t_Mcs_Navtokeshi){
+
+        List<T_Mcs_Navtokeshi> list_flag = t_Mcs_NavtokeshiServiceImpl.findCaiDanDataBykeShiMingChengAndZiJiCaiDanMingCheng(t_Mcs_Navtokeshi);
+
+        return list_flag;
     }
 
 

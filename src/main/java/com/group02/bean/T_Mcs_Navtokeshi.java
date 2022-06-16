@@ -12,7 +12,7 @@ public class T_Mcs_Navtokeshi {
     private String shangJiID;
     private Date gengXinShiJian;
     private String ziJiCaiDanID;
-    private String ziJiCaiDanMingnCheng;
+    private String ziJiCaiDanMingCheng;
     private String zuID;
     private String zuMing;
     private String keShiID;
@@ -65,12 +65,12 @@ public class T_Mcs_Navtokeshi {
         this.ziJiCaiDanID = ziJiCaiDanID;
     }
 
-    public String getZiJiCaiDanMingnCheng() {
-        return ziJiCaiDanMingnCheng;
+    public String getZiJiCaiDanMingCheng() {
+        return ziJiCaiDanMingCheng;
     }
 
-    public void setZiJiCaiDanMingnCheng(String ziJiCaiDanMingnCheng) {
-        this.ziJiCaiDanMingnCheng = ziJiCaiDanMingnCheng;
+    public void setZiJiCaiDanMingCheng(String ziJiCaiDanMingCheng) {
+        this.ziJiCaiDanMingCheng = ziJiCaiDanMingCheng;
     }
 
     public String getZuID() {
@@ -159,5 +159,28 @@ public class T_Mcs_Navtokeshi {
 
     public void setMingZi(String mingZi) {
         this.mingZi = mingZi;
+    }
+
+    @Override
+    public String toString() {
+        return "T_Mcs_Navtokeshi{" +
+                "xiTongID='" + xiTongID + '\'' +
+                ", beiGaiBian='" + beiGaiBian + '\'' +
+                ", shangJiID='" + shangJiID + '\'' +
+                ", gengXinShiJian=" + gengXinShiJian +
+                ", ziJiCaiDanID='" + ziJiCaiDanID + '\'' +
+                ", ziJiCaiDanMingCheng='" + ziJiCaiDanMingCheng + '\'' +
+                ", zuID='" + zuID + '\'' +
+                ", zuMing='" + zuMing + '\'' +
+                ", keShiID='" + keShiID + '\'' +
+                ", keShiMingCheng='" + keShiMingCheng + '\'' +
+                ", paiXuID='" + paiXuID + '\'' +
+                ", zuXiTongID='" + zuXiTongID + '\'' +
+                ", bingRenID='" + bingRenID + '\'' +
+                ", zhuJie='" + zhuJie + '\'' +
+                ", gongJiaoID='" + gongJiaoID + '\'' +
+                ", eMingCheng='" + eMingCheng + '\'' +
+                ", mingZi='" + mingZi + '\'' +
+                '}';
     }
 }

@@ -15,13 +15,14 @@
 <!--    </select>-->
 
 <!--
-    * id： seleteT_DaoHangFuAll
+    * id： seleteDaoHangFuAll
     * 功能：  查询t_DaoHangFu所有数据
     * 时间：  6.9
     * codeBy：  韩兆淇
     * @return List<t_DaoHangFu>
+
 -->
-    <select id="seleteDaoHangFuAll" resultType="DaoHangFu">
+    <select id="seleteDaoHangFuAll" resultType="com.group02.bean.DaoHangFu">
         select * from t_DaoHangFu
     </select>
 

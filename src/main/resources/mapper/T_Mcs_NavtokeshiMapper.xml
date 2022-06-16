@@ -9,24 +9,23 @@
         * codeBy：  韩兆淇
         * @return List<DaoHangZi>
     -->
-    <select id="seleteT_Mcs_NavtokeshiAll" resultType="T_Mcs_Navtokeshi">
-        select zijicaidanmingncheng from t_mcs_navtokeshi where zuID = #{xiTongID}
+    <select id="seleteT_Mcs_NavtokeshiAll" resultType="com.group02.bean.T_Mcs_Navtokeshi">
+        select * from t_mcs_navtokeshi where zuID = #{xiTongID}
     </select>
 
 <!--    查询常用菜单所有数据 并按组名分组-->
-    <select id="selectT_Mcs_NavtokeshiAllGroupByZuMing" resultType="T_Mcs_Navtokeshi">
+    <select id="selectCaiDanDataBykeShiMingChengAndZiJiCaiDanMingCheng" resultType="com.group02.bean.T_Mcs_Navtokeshi">
         select
              *
         from
              t_mcs_navtokeshi
-        <where>
-            <if test="ksmc != null and ksmc != ''">
-                keShiMingCheng = #{ksmc}
-            </if>
-            <if test="erjicaidanmingcheng != null and erjicaidanmingcheng != ''">
-                and ziJiCaiDanMingnCheng like concat('%',#{erjicaidanmingcheng},'%')
-            </if>
-        </where>
+
+        where
+            keShiMingCheng = #{keShiMingCheng}
+
+        <if test="ziJiCaiDanMingCheng != null and ziJiCaiDanMingCheng != ''">
+            and ziJiCaiDanMingCheng like concat('%',#{ziJiCaiDanMingCheng},'%')
+        </if>
         order by
              zuming
     </select>
