@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group02.dao.YongHuDao">
+
+    <!--
+        * id： methodTow
+        * 功能：  DemoMapper方法模板
+        * 时间：  最后一次操作时间
+        * codeBy：  操作人名
+        * @return String
+    -->
+<!--    <select id="methodTow" >-->
+
+
+    <!--
+           结果映射 id为 selactAll
+        -->
+    <resultMap id="selactAll" type="com.group02.bean.KeShi">
+        <id property='xiTongID'  column='kxtID'/>
+        <result property="bingRenID" column="kbrID"/>
+        <result property="gengXinShiJian" column="kgxsj"/>
+        <result property="bingQuMingCheng" column="kbqmc"/>
+        <result property="bingQuID" column="kbqID"/>
+        <result property="keShiID" column="kksID"/>
+        <result property="keShiMingCheng" column="kksmc"/>
+
+        <result property="yongHuKeShi_objFlag.xiTongID" column="ykxtID"/>
+        <result property="yongHuKeShi_objFlag.bingRenID" column="ykbrID"/>
+        <result property="yongHuKeShi_objFlag.gengXinShiJian" column="ykgxsj"/>
+        <result property="yongHuKeShi_objFlag.keShiID" column="ykshid"/>
+        <result property="yongHuKeShi_objFlag.yongHuID" column="ykyhid"/>
+
+        <result property="yongHU_objFlag.xiTongID" column="yxtID"/>
+        <result property="yongHU_objFlag.bingRenID" column="ybrID"/>
+        <result property="yongHU_objFlag.gengXinShiJian" column="ygxsj"/>
+        <result property="yongHU_objFlag.yongHuID" column="ykyhid"/>
+        <result property="yongHU_objFlag.chaoJi" column="ycj"/>
+        <result property="yongHU_objFlag.miMa" column="ymm"/>
+        <result property="yongHU_objFlag.beiyong01" column="yby01"/>
+        <result property="yongHU_objFlag.yongHuID" column="yyhID"/>
+        <result property="yongHU_objFlag.yongHuMing" column="yyhm"/>
+        <result property="yongHU_objFlag.gongHao" column="ygh"/>
+        <result property="yongHU_objFlag.zhiWu" column="yzu"/>
+        <result property="yongHU_objFlag.shenFenZhengHao" column="ysfzh"/>
+    </resultMap>
+
+
+    <select id="selectKeShiDataByCon" resultMap="selactAll">
+        select
+            ks.xiTongID kxtID,
+            ks.bingRenID kbrID,
+            ks.gengXinShiJian kgxsj,
+            ks.bingQuMingCheng kbqmc,
+            ks.bingQuID kbqID,
+            ks.keShiID kksID,
+            ks.keShiMingCheng kksmc,
+
+            yhks.xiTongID ykxtID,
+            yhks.bingRenID ykbrID,
+            yhks.gengXinShiJian ykgxsj,
+            yhks.keShiID ykshid,
+            yhks.yongHuID ykyhid,
+
+            yh.xiTongID yxtID,
+            yh.bingRenID ybrID,
+            yh.gengXinShiJian ygxsj,
+            yh.chaoji ycj,
+            yh.mima ymm,
+            yh.beiyong01 yby01,
+            yh.yongHuID yyhID,
+            yh.yongHuMing yyhm,
+            yh.gongHao ygh,
+            yh.zhiWu yzu,
+            yh.shenFenZhengHao ysfzh
+        from
+            t_yonghukeshi yhks
+        left join
+            t_keshi ks
+        on
+            ks.keShiID = yhks.keShiID
+        left join
+            t_yonghu yh
+        on
+            yh.yongHuID = yhks.yongHuID
+    </select>
+
+<!--  删除关系表  -->
+    <delete id="deleteYongHuKeShiByCon">
+        delete from
+                t_YongHuKeShi
+        where
+              xiTongID = #{xiTongID}
+    </delete>
+
+<!--  删除用户表  -->
+    <delete id="deleteYongHuByCon">
+        delete from
+                    t_yonghu
+        where
+            yongHuID = #{yongHuID}
+    </delete>
+    
+<!--  查询关系表  -->
+    <select id="chaxunguanxibiao" resultType="YongHuKeShi">
+        select
+               *
+        from
+             t_yonghukeshi
+        where
+            yongHuID = #{yongHuID}
+    </select>
+
+
+</mapper>
